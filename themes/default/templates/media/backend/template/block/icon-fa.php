@@ -1,0 +1,1 @@
+	<i class="fa fa-<?= $fa ?> fa-5 tooltip-post" data-toggle="tooltip" data-placement="top" <?php if (!empty(__($value)) && !empty(__($title))) echo 'data-original-title="'.__($title).': '.__($value).'"'; ?> ></i>

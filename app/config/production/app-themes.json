@@ -1,0 +1,10 @@
+{	
+	"varela":{
+		"name"		: "varela",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.5",
+		"author"	: "efx",
+		"mode"		: "asset"
+	}
+
+}

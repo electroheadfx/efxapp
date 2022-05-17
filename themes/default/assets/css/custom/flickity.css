@@ -1,0 +1,201 @@
+@import url("../flickity.css");
+
+/* flickity --> */
+          
+  /* carousel setup */
+    .carousel {
+      background: #222;
+    }
+
+
+  /* Previous and next buttons setup */
+
+    /* no circle */
+    .flickity-button {
+      background: transparent;
+    }
+    /* big previous & next buttons */
+    .flickity-prev-next-button {
+      width: 150px;
+      height: 150px;
+    }
+    /* icon color */
+    .flickity-button-icon {
+      fill: white;
+    }
+    /* hide disabled button */
+    .flickity-button:disabled {
+      display: none;
+    }
+
+    /* arrow color */
+    .flickity-prev-next-button .arrow {
+      fill: #5d5d5d;
+    }
+    .flickity-prev-next-button:hover .arrow {
+      fill: #B9B9B9;
+    }
+    .flickity-prev-next-button.no-svg {
+      color: #5d5d5d;
+    }
+    .flickity-prev-next-button:hover {
+      background: transparent;
+    }
+    .flickity-button:hover {
+      background: transparent;
+    }
+/* // shadow arrow next prev */
+    .flickity-prev-next-button svg {
+      -webkit-filter: drop-shadow( 0px 3px 2px hsla(0, 0%, 0%, 1) );
+      filter: drop-shadow( 0px 3px 2px hsla(0, 0%, 0%, 1) );
+    }
+
+    /* hide disabled button */
+    .flickity-prev-next-button:disabled {
+      display: none;
+    }
+
+  /* fade in image when loaded */
+    .carousel-cell-image {
+      display: block;
+      max-height: 100%;
+      margin: 0 auto;
+      max-width: 100%;
+      -webkit-transition: opacity 0.4s;
+      transition: opacity 0.4s;
+      opacity: 0;
+    }
+
+    .carousel-cell-image.flickity-lazyloaded,
+    .carousel-cell-image.flickity-lazyerror {
+      opacity: 1;
+    }
+    
+    .carousel-cell {
+      width: 100%;
+      height: 300px;
+      margin-right: 0;
+      /* center images in cells with flexbox */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  /* .is-fullscreen added to carousel when fullscreen
+     size cells to full height when fullscreen */
+    .carousel.is-fullscreen .carousel-cell {
+      /* max-width: 100%; */
+      height: 100%;
+      padding-top: 20px;
+      z-index: 1000000;
+    }
+    .carousel-cell-image {
+      display: block;
+      max-height: 100%;
+    }
+    .carousel.is-fullscreen .carousel-cell-image {
+      max-width: 100%;
+    }
+
+    .flickity-fullscreen-button {
+      top: -23px;
+      left: -20px;
+    }
+
+    /* position outside */
+    .flickity-prev-next-button.previous {
+      left: -31px;
+    }
+    .flickity-prev-next-button.next {
+      right: -31px;
+    }
+
+    .flickity-prev-next-button .flickity-button-icon {
+        top: 38%;
+        width: 30%;
+        height: 30%;
+        left: initial;
+    }
+
+    .flickity-prev-next-button.previous .flickity-button-icon {
+        left: 25px;
+        opacity: 0;
+        transition: all 0.15s ease-in 0s;
+        -webkit-transition: all 0.15s ease-in 0s;
+        -moz-transition: all 0.15s ease-in 0s;
+        -ms-transition: all 0.15s ease-in 0s;
+        -o-transition: all 0.15s ease-in 0s;
+    }
+
+    .flickity-prev-next-button.next .flickity-button-icon {
+        right: 25px;
+        opacity: 0;
+        transition: all 0.15s ease-in 0s;
+        -webkit-transition: all 0.15s ease-in 0s;
+        -moz-transition: all 0.15s ease-in 0s;
+        -ms-transition: all 0.15s ease-in 0s;
+        -o-transition: all 0.15s ease-in 0s;
+    }
+
+    .flickity-prev-next-button.previous:hover .flickity-button-icon {
+        left: 0;
+        opacity: 1;
+    }
+
+    .flickity-prev-next-button.next:hover .flickity-button-icon {
+        right: 0;
+        opacity: 1;
+    }
+
+    .carousel.is-fullscreen .flickity-prev-next-button.previous {
+      left: 0;
+    }
+
+    .carousel.is-fullscreen .flickity-prev-next-button.next {
+      right: 0;
+    }
+
+    .carousel.is-fullscreen .flickity-fullscreen-button {
+      top: 10px;
+      left: 10px;
+    }
+    
+
+    .flickity-fullscreen-button .flickity-button-icon {
+      fill: #5d5d5d;
+      width: 13px;
+      height: 13px;
+    }
+    .flickity-fullscreen-button .flickity-button-icon:hover {
+      fill: #8b8b8b;
+    }
+
+    /* dots point color */
+    .flickity-page-dots .dot {
+      background-color: #686868;
+    }
+    
+    .flickity-page-dots .dot {
+      margin: 0 5px;
+    }
+
+    .flickity-page-dots {
+      bottom: -20px;
+    }
+
+    .carousel.flickity-enabled {
+      z-index: 2;
+    }
+
+/* <-- flickity */
+
+  .preview {    
+    position: relative;
+  }
+
+  .preview .img-preview {
+    
+    width: 100%;
+
+  }
+

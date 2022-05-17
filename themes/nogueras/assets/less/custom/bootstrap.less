@@ -1,0 +1,40 @@
+// bootstrap 3.2.6
+
+// setup bootstrap fallback
+@base-url: "../../../../default/assets/less/bootstrap-3.3.7";
+@custom-url: "../../../../default/assets/less/custom";
+
+// Import bootstrap core
+@import "../bootstrap/bootstrap.less";
+@import "../../../../default/assets/less/custom/bootstrap_default.less";
+// Import bootstrap-select
+@import "../bootstrap/bootstrap-select.less";
+
+// Nogueras theme
+// -----------------------------------------------------
+
+@import url(/efx/font/index.css?family=Helvetica&weight=200Thin&theme=nogueras);
+@import url(/efx/font/index.css?family=Futura&weight=200Book,300Regular,400Bold,&theme=nogueras);
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Condensed+Light,200Condensed+Light+Italic&theme=nogueras);
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Light,200Light+Italic&theme=nogueras);
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Helvetica Thin', Helvetica, Helvetica Neue, Arial, sans-serif;
+	text-align: left;
+}
+
+/* sort frontend buttons	*/
+#frontend-control .btn {
+  color: #686D85;
+  border-color: #686D85;
+}
+
+#frontend-control .btn:hover {
+  background-color: #D5D8E7;
+  color: #060A19;
+}
+
+#frontend-control .btn.active {
+  background-color: #fef2da;
+}

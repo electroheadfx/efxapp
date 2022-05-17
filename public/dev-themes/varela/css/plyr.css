@@ -1,0 +1,1481 @@
+@keyframes plyr-progress {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  to {
+    background-position: 25px 0;
+  }
+}
+@keyframes plyr-popup {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  0% {
+    opacity: .5;
+    transform: translateY(10px);
+  }
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes plyr-fade-in {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  from {
+    opacity: 0;
+  }
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  to {
+    opacity: 1;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  direction: ltr;
+  font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  line-height: 1.7;
+  max-width: 100%;
+  min-width: 200px;
+  position: relative;
+  text-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr audio,
+.plyr video {
+  border-radius: inherit;
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr button {
+  font: inherit;
+  line-height: inherit;
+  width: auto;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:focus {
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui {
+  box-sizing: border-box;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui *,
+.plyr--full-ui ::after,
+.plyr--full-ui ::before {
+  box-sizing: inherit;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui a,
+.plyr--full-ui button,
+.plyr--full-ui input,
+.plyr--full-ui label {
+  touch-action: manipulation;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__badge {
+  background: #4f5b5f;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 9px;
+  line-height: 1;
+  padding: 3px 4px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui ::-webkit-media-text-track-container {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__captions {
+  animation: plyr-fade-in 0.3s ease;
+  bottom: 0;
+  color: #fff;
+  display: none;
+  font-size: 14px;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__captions .plyr__caption {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  line-height: 185%;
+  padding: .2em .5em;
+  white-space: pre-wrap;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__captions .plyr__caption div {
+  display: inline;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__captions span:empty {
+  display: none;
+}
+@media (min-width: 480px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__captions {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__captions {
+    font-size: 18px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--captions-active .plyr__captions {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:not(.plyr--hide-controls) .plyr__controls:not(:empty) ~ .plyr__captions {
+  transform: translateY(-40px);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control {
+  background: 0 0;
+  border: 0;
+  border-radius: 3px;
+  color: inherit;
+  cursor: pointer;
+  flex-shrink: 0;
+  overflow: visible;
+  padding: 7px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control svg {
+  display: block;
+  fill: currentColor;
+  height: 18px;
+  pointer-events: none;
+  width: 18px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control:focus {
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control.plyr__tab-focus {
+  box-shadow: 0 0 0 5px rgba(26, 175, 255, 0.5);
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+a.plyr__control {
+  text-decoration: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+a.plyr__control::after,
+a.plyr__control::before {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control.plyr__control--pressed .icon--not-pressed,
+.plyr__control.plyr__control--pressed .label--not-pressed,
+.plyr__control:not(.plyr__control--pressed) .icon--pressed,
+.plyr__control:not(.plyr__control--pressed) .label--pressed {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded=true] {
+  background: #1aafff;
+  color: #ffffff;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video .plyr__control svg {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+  background: #1aafff;
+  color: #ffffff;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control--overlaid {
+  background: rgba(26, 175, 255, 0.8);
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  display: none;
+  left: 50%;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control--overlaid svg {
+  left: 2px;
+  position: relative;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__control--overlaid:focus,
+.plyr__control--overlaid:hover {
+  background: #1aafff;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--playing .plyr__control--overlaid {
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video .plyr__control--overlaid {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui ::-webkit-media-controls {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls .plyr__menu,
+.plyr__controls .plyr__progress,
+.plyr__controls .plyr__time,
+.plyr__controls .plyr__volume,
+.plyr__controls > .plyr__control {
+  margin-left: 5px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls .plyr__menu + .plyr__control,
+.plyr__controls .plyr__progress + .plyr__control,
+.plyr__controls > .plyr__control + .plyr__control,
+.plyr__controls > .plyr__control + .plyr__menu {
+  margin-left: 2px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:first-child,
+.plyr__controls > .plyr__control:first-child + [data-plyr=pause] {
+  margin-left: 0;
+  margin-right: auto;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls:empty {
+  display: none;
+}
+@media (min-width: 480px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__controls .plyr__menu,
+  .plyr__controls .plyr__progress,
+  .plyr__controls .plyr__time,
+  .plyr__controls .plyr__volume,
+  .plyr__controls > .plyr__control {
+    margin-left: 10px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--audio .plyr__controls {
+  background: #fff;
+  border-radius: inherit;
+  color: #4f5b5f;
+  padding: 10px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video .plyr__controls {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: 20px 5px 5px;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  z-index: 3;
+}
+@media (min-width: 480px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr--video .plyr__controls {
+    padding: 35px 10px 10px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video.plyr--hide-controls .plyr__controls {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr [data-plyr=airplay],
+.plyr [data-plyr=captions],
+.plyr [data-plyr=fullscreen],
+.plyr [data-plyr=pip] {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--airplay-supported [data-plyr=airplay],
+.plyr--captions-enabled [data-plyr=captions],
+.plyr--fullscreen-enabled [data-plyr=fullscreen],
+.plyr--pip-supported [data-plyr=pip] {
+  display: inline-block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__video-embed {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__video-embed iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui .plyr__video-embed > .plyr__video-embed__container {
+  padding-bottom: 240%;
+  position: relative;
+  transform: translateY(-38.28125%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu {
+  display: flex;
+  position: relative;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu .plyr__control svg {
+  transition: transform 0.3s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu .plyr__control[aria-expanded=true] svg {
+  transform: rotate(90deg);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu .plyr__control[aria-expanded=true] .plyr__tooltip {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container {
+  animation: plyr-popup 0.2s ease;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  bottom: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #4f5b5f;
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: absolute;
+  right: -3px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container > div {
+  overflow: hidden;
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container::after {
+  border: 4px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.9);
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 15px;
+  top: 100%;
+  width: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container [role=menu] {
+  padding: 7px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container [role=menuitem],
+.plyr__menu__container [role=menuitemradio] {
+  margin-top: 2px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container [role=menuitem]:first-child,
+.plyr__menu__container [role=menuitemradio]:first-child {
+  margin-top: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control {
+  align-items: center;
+  color: #4f5b5f;
+  display: flex;
+  font-size: 14px;
+  padding: 4px 11px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control > span {
+  align-items: inherit;
+  display: flex;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control::after {
+  border: 4px solid transparent;
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--forward {
+  padding-right: 28px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--forward::after {
+  border-left-color: rgba(79, 91, 95, 0.8);
+  right: 5px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--forward.plyr__tab-focus::after,
+.plyr__menu__container .plyr__control--forward:hover::after {
+  border-left-color: currentColor;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--back {
+  font-weight: 500;
+  margin: 7px;
+  margin-bottom: 3px;
+  padding-left: 28px;
+  position: relative;
+  width: calc(86%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--back::after {
+  border-right-color: rgba(79, 91, 95, 0.8);
+  left: 7px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--back::before {
+  background: #b7c5cd;
+  box-shadow: 0 1px 0 #fff;
+  content: '';
+  height: 1px;
+  left: 0;
+  margin-top: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control--back.plyr__tab-focus::after,
+.plyr__menu__container .plyr__control--back:hover::after {
+  border-right-color: currentColor;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio] {
+  padding-left: 7px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio]::after,
+.plyr__menu__container .plyr__control[role=menuitemradio]::before {
+  border-radius: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio]::before {
+  background: rgba(0, 0, 0, 0.1);
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  height: 16px;
+  margin-right: 10px;
+  transition: all .3s ease;
+  width: 16px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio]::after {
+  background: #fff;
+  border: 0;
+  height: 6px;
+  left: 12px;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: transform .3s ease,opacity .3s ease;
+  width: 6px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+  background: #1aafff;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__control[role=menuitemradio].plyr__tab-focus::before,
+.plyr__menu__container .plyr__control[role=menuitemradio]:hover::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__menu__container .plyr__menu__value {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: -5px;
+  overflow: hidden;
+  padding-left: 25px;
+  pointer-events: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range] {
+  -webkit-appearance: none;
+  background: 0 0;
+  border: 0;
+  border-radius: 26px;
+  color: #1aafff;
+  display: block;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-webkit-slider-runnable-track {
+  background: 0 0;
+  border: 0;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: box-shadow 0.3s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  background-image: linear-gradient(to right, currentColor var(--value, 0), transparent var(--value, 0));
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-webkit-slider-thumb {
+  background: #fff;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2);
+  height: 13px;
+  position: relative;
+  transition: all .2s ease;
+  width: 13px;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-moz-range-track {
+  background: 0 0;
+  border: 0;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: box-shadow 0.3s ease;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-moz-range-thumb {
+  background: #fff;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2);
+  height: 13px;
+  position: relative;
+  transition: all .2s ease;
+  width: 13px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-moz-range-progress {
+  background: currentColor;
+  border-radius: 2.5px;
+  height: 5px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-ms-track {
+  background: 0 0;
+  border: 0;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: box-shadow 0.3s ease;
+  -ms-user-select: none;
+  user-select: none;
+  color: transparent;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-ms-fill-upper {
+  background: 0 0;
+  border: 0;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: box-shadow 0.3s ease;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-ms-fill-lower {
+  background: 0 0;
+  border: 0;
+  border-radius: 2.5px;
+  height: 5px;
+  transition: box-shadow 0.3s ease;
+  -ms-user-select: none;
+  user-select: none;
+  background: currentColor;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-ms-thumb {
+  background: #fff;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2);
+  height: 13px;
+  position: relative;
+  transition: all .2s ease;
+  width: 13px;
+  margin-top: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-ms-tooltip {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]:focus {
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range].plyr__tab-focus::-webkit-slider-runnable-track {
+  box-shadow: 0 0 0 5px rgba(26, 175, 255, 0.5);
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range].plyr__tab-focus::-moz-range-track {
+  box-shadow: 0 0 0 5px rgba(26, 175, 255, 0.5);
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui input[type=range].plyr__tab-focus::-ms-track {
+  box-shadow: 0 0 0 5px rgba(26, 175, 255, 0.5);
+  outline: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]::-webkit-slider-runnable-track {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]::-moz-range-track {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]::-ms-track {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]:active::-webkit-slider-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]:active::-moz-range-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--video input[type=range]:active::-ms-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]::-webkit-slider-runnable-track {
+  background-color: rgba(183, 197, 205, 0.66);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]::-moz-range-track {
+  background-color: rgba(183, 197, 205, 0.66);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]::-ms-track {
+  background-color: rgba(183, 197, 205, 0.66);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]:active::-webkit-slider-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]:active::-moz-range-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--full-ui.plyr--audio input[type=range]:active::-ms-thumb {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(47, 52, 61, 0.2), 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__poster {
+  background-color: #000;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .2s ease;
+  width: 100%;
+  z-index: 1;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--stopped.plyr__poster-enabled .plyr__poster {
+  opacity: 1;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__time {
+  font-size: 14px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__time + .plyr__time::before {
+  content: '\2044';
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__time + .plyr__time {
+    display: none;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video .plyr__time {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__tooltip {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  bottom: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #4f5b5f;
+  font-size: 14px;
+  font-weight: 500;
+  left: 50%;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  opacity: 0;
+  padding: 5px 7.5px;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, 10px) scale(0.8);
+  transform-origin: 50% 100%;
+  transition: transform .2s .1s ease,opacity .2s .1s ease;
+  white-space: nowrap;
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__tooltip::before {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(255, 255, 255, 0.9);
+  bottom: -4px;
+  content: '';
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 0;
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr .plyr__control.plyr__tab-focus .plyr__tooltip,
+.plyr .plyr__control:hover .plyr__tooltip,
+.plyr__tooltip--visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr .plyr__control:hover .plyr__tooltip {
+  z-index: 3;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:first-child .plyr__tooltip,
+.plyr__controls > .plyr__control:first-child + .plyr__control .plyr__tooltip {
+  left: 0;
+  transform: translate(0, 10px) scale(0.8);
+  transform-origin: 0 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:first-child .plyr__tooltip::before,
+.plyr__controls > .plyr__control:first-child + .plyr__control .plyr__tooltip::before {
+  left: 16px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:last-child .plyr__tooltip {
+  left: auto;
+  right: 0;
+  transform: translate(0, 10px) scale(0.8);
+  transform-origin: 100% 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:last-child .plyr__tooltip::before {
+  left: auto;
+  right: 16px;
+  transform: translateX(50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__controls > .plyr__control:first-child .plyr__tooltip--visible,
+.plyr__controls > .plyr__control:first-child + .plyr__control .plyr__tooltip--visible,
+.plyr__controls > .plyr__control:first-child + .plyr__control.plyr__tab-focus .plyr__tooltip,
+.plyr__controls > .plyr__control:first-child + .plyr__control:hover .plyr__tooltip,
+.plyr__controls > .plyr__control:first-child.plyr__tab-focus .plyr__tooltip,
+.plyr__controls > .plyr__control:first-child:hover .plyr__tooltip,
+.plyr__controls > .plyr__control:last-child .plyr__tooltip--visible,
+.plyr__controls > .plyr__control:last-child.plyr__tab-focus .plyr__tooltip,
+.plyr__controls > .plyr__control:last-child:hover .plyr__tooltip {
+  transform: translate(0, 0) scale(1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video {
+  background: #000;
+  overflow: hidden;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video.plyr--menu-open {
+  overflow: visible;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__video-wrapper {
+  background: #000;
+  border-radius: inherit;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress {
+  flex: 1;
+  left: 6.5px;
+  margin-right: 13px;
+  position: relative;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress input[type=range],
+.plyr__progress__buffer {
+  margin-left: -6.5px;
+  margin-right: -6.5px;
+  width: calc(113%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress input[type=range] {
+  position: relative;
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress .plyr__tooltip {
+  font-size: 14px;
+  left: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress__buffer {
+  -webkit-appearance: none;
+  background: 0 0;
+  border: 0;
+  border-radius: 100px;
+  height: 5px;
+  left: 0;
+  margin-top: -2.5px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress__buffer::-webkit-progress-bar {
+  background: 0 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress__buffer::-webkit-progress-value {
+  background: currentColor;
+  border-radius: 100px;
+  min-width: 5px;
+  transition: width 0.2s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress__buffer::-moz-progress-bar {
+  background: currentColor;
+  border-radius: 100px;
+  min-width: 5px;
+  transition: width 0.2s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__progress__buffer::-ms-fill {
+  border-radius: 100px;
+  transition: width 0.2s ease;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video .plyr__progress__buffer {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.25);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--audio .plyr__progress__buffer {
+  color: rgba(183, 197, 205, 0.66);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--loading .plyr__progress__buffer {
+  animation: plyr-progress 1s linear infinite;
+  background-image: linear-gradient(-45deg, rgba(47, 52, 61, 0.6) 25%, transparent 25%, transparent 50%, rgba(47, 52, 61, 0.6) 50%, rgba(47, 52, 61, 0.6) 75%, transparent 75%, transparent);
+  background-repeat: repeat-x;
+  background-size: 25px 25px;
+  color: transparent;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--video.plyr--loading .plyr__progress__buffer {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--audio.plyr--loading .plyr__progress__buffer {
+  background-color: rgba(183, 197, 205, 0.66);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__volume {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__volume input[type=range] {
+  margin-left: 5px;
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 480px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__volume {
+    max-width: 90px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr__volume {
+    max-width: 110px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--is-ios .plyr__volume {
+  display: none !important;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--is-ios.plyr--vimeo [data-plyr=mute] {
+  display: none !important;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen.plyr--hide-controls {
+  cursor: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen.plyr--hide-controls {
+  cursor: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:fullscreen.plyr--hide-controls {
+  cursor: none;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:-webkit-full-screen .plyr__captions {
+    font-size: 21px;
+  }
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:-ms-fullscreen .plyr__captions {
+    font-size: 21px;
+  }
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:fullscreen .plyr__captions {
+    font-size: 21px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-webkit-full-screen.plyr--hide-controls {
+  cursor: none;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:-webkit-full-screen .plyr__captions {
+    font-size: 21px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-moz-full-screen.plyr--hide-controls {
+  cursor: none;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:-moz-full-screen .plyr__captions {
+    font-size: 21px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr:-ms-fullscreen.plyr--hide-controls {
+  cursor: none;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr:-ms-fullscreen .plyr__captions {
+    font-size: 21px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback {
+  background: #000;
+  border-radius: 0!important;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000000;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback video {
+  height: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback .plyr__control .icon--exit-fullscreen {
+  display: block;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback .plyr__control .icon--exit-fullscreen + svg {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--fullscreen-fallback.plyr--hide-controls {
+  cursor: none;
+}
+@media (min-width: 1024px) {
+  /* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+  .plyr--fullscreen-fallback .plyr__captions {
+    font-size: 21px;
+  }
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__ads {
+  border-radius: inherit;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__ads > div,
+.plyr__ads > div iframe {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__ads::after {
+  background: rgba(47, 52, 61, 0.8);
+  border-radius: 2px;
+  bottom: 10px;
+  color: #fff;
+  content: attr(data-badge-text);
+  font-size: 11px;
+  padding: 2px 6px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  z-index: 3;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__ads::after:empty {
+  display: none;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__cues {
+  background: currentColor;
+  display: block;
+  height: 5px;
+  left: 0;
+  margin: -2.5px 0 0;
+  opacity: .8;
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  z-index: 3;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  bottom: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  opacity: 0;
+  padding: 3px;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(0, 10px) scale(0.8);
+  transform-origin: 50% 100%;
+  transition: transform .2s .1s ease,opacity .2s .1s ease;
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb--is-shown {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb::before {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(255, 255, 255, 0.9);
+  bottom: -4px;
+  content: '';
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 0;
+  z-index: 2;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb__image-container {
+  background: #b7c5cd;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb__image-container img {
+  height: 100%;
+  left: 0;
+  max-height: none;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb__time-container {
+  bottom: 6px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+  z-index: 3;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-thumb__time-container span {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 6px;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-scrubbing {
+  bottom: 0;
+  filter: blur(1px);
+  height: 100%;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity .3s ease;
+  width: 100%;
+  z-index: 1;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-scrubbing--is-shown {
+  opacity: 1;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__preview-scrubbing img {
+  height: 100%;
+  left: 0;
+  max-height: none;
+  max-width: none;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr--no-transition {
+  transition: none !important;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr__sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  border: 0!important;
+  height: 1px!important;
+  padding: 0!important;
+  position: absolute!important;
+  width: 1px !important;
+}
+/* line 1, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/plyr3/plyr.less */
+.plyr [hidden] {
+  display: none !important;
+}
+/*#B1243C #3498db;*/
+/* line 8, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/custom/plyr.less */
+.plyr input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: 0 0;
+}
+/*@plyr-color-main:                       #0017d0; #B1243C #3498db;*/
+/* control volume progress */
+/* line 8, /Users/efxair/sites/clients/varela/fuelphp/themes/varela/assets/less/custom/plyr.less */
+.plyr--full-ui input[type=range] {
+  color: #3788cf;
+  /* 0017d0 */
+}
+/* control button play color */
+/* line 13, /Users/efxair/sites/clients/varela/fuelphp/themes/varela/assets/less/custom/plyr.less */
+.plyr__control--overlaid {
+  background-color: #3788cf;
+}
+/* control button play color hover */
+/* line 18, /Users/efxair/sites/clients/varela/fuelphp/themes/varela/assets/less/custom/plyr.less */
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+  background-color: #0017d0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRoZW1lcy9kZWZhdWx0L2Fzc2V0cy9sZXNzL3BseXIzL3BseXIubGVzcyIsInRoZW1lcy9kZWZhdWx0L2Fzc2V0cy9sZXNzL2N1c3RvbS9wbHlyLmxlc3MiLCJ0aGVtZXMvdmFyZWxhL2Fzc2V0cy9sZXNzL2N1c3RvbS9wbHlyLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBQXlCO0lBQUcsMkJBQUE7OztBQUE0Qjs7RUFBc0I7SUFBRyxXQUFBO0lBQVcsV0FBVSxnQkFBVjs7O0VBQTJCO0lBQUcsVUFBQTtJQUFVLFdBQVUsYUFBVjs7O0FBQXlCOztFQUF3QjtJQUFLLFVBQUE7OztFQUFVO0lBQUcsVUFBQTs7OztBQUFXO0VBQU0sNkJBQUE7RUFBNkIsNENBQUE7RUFBNEMsY0FBQTtFQUFjLHFCQUFtQixlQUFjLGtCQUFpQix3Q0FBbEQ7RUFBd0Ysa0NBQUE7RUFBa0MsZ0JBQUE7RUFBZ0IsZ0JBQUE7RUFBZ0IsZUFBQTtFQUFlLGdCQUFBO0VBQWdCLGtCQUFBO0VBQWtCLGlCQUFBO0VBQWlCLGdDQUFBOzs7QUFBK0IsS0FBTTtBQUFNLEtBQU07RUFBTSxzQkFBQTtFQUFzQixZQUFBO0VBQVksc0JBQUE7RUFBc0IsV0FBQTs7O0FBQVcsS0FBTTtFQUFPLGFBQUE7RUFBYSxvQkFBQTtFQUFvQixXQUFBOzs7QUFBVyxLQUFLO0VBQU8sVUFBQTs7O0FBQVU7RUFBZSxzQkFBQTs7O0FBQXNCLGNBQWU7QUFBRSxjQUFlO0FBQVEsY0FBZTtFQUFTLG1CQUFBOzs7QUFBbUIsY0FBZTtBQUFFLGNBQWU7QUFBTyxjQUFlO0FBQU0sY0FBZTtFQUFNLDBCQUFBOzs7QUFBMEI7RUFBYSxtQkFBQTtFQUFtQixrQkFBQTtFQUFrQixXQUFBO0VBQVcsY0FBQTtFQUFjLGNBQUE7RUFBYyxnQkFBQTs7O0FBQWdCLGNBQWU7RUFBcUMsYUFBQTs7O0FBQWE7RUFBZ0IsaUNBQUE7RUFBZ0MsU0FBQTtFQUFTLFdBQUE7RUFBVyxhQUFBO0VBQWEsZUFBQTtFQUFl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 */

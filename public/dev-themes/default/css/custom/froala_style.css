@@ -1,0 +1,31 @@
+@import url("../froala_editor/froala_style.css");
+
+.fr-view {
+	text-overflow: ellipsis; 
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+
+/* Froala Editor custom */
+.fr-view blockquote {
+  margin-left: 0;
+  border-left: 5px solid #555;
+  padding: 10.5px 21px;
+  margin: 10px 0 21px;
+  font-style: italic;
+  color: #555;
+  font-size: 25px;
+}
+
+.fr-basic .fr-element {
+  color:inherit;
+}
+
+// .fr-view img.fr-dii.fr-fil, .fr-view img.fr-dii.fr-fir {
+//   margin: 5px 25px 5px 0;
+// }
+
+/* end Froala Editor custom */

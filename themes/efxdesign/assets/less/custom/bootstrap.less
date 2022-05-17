@@ -1,0 +1,207 @@
+// bootstrap 3.2.6
+
+// setup bootstrap fallback
+@base-url: "../../../../default/assets/less/bootstrap-3.3.7";
+@custom-url: "../../../../default/assets/less/custom";
+
+// Import bootstrap core
+@import "../bootstrap/bootstrap.less";
+@import "../../../../default/assets/less/custom/bootstrap_default.less";
+// Import bootstrap-select
+@import "../bootstrap/bootstrap-select.less";
+
+// Theme
+// -----------------------------------------------------
+
+// "Open Sans Light"
+// "Open Sans Light Italic"
+// "Open Sans Condensed Light"
+// @import url(/efx/font/index.css?family=futuracl&weight=200Condensed+Light&theme=josselin);
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Light,200Light+Italic,200Condensed+Light&theme=default);
+
+// "helvetica 35 Condensed Thin", "helvetica 35 Condensed Bold"
+@import url(/efx/font/index.css?family=helvetica+35&weight=200Condensed+Thin,600Condensed+Bold&theme=default);
+
+// "helvetica Thin"
+@import url(/efx/font/index.css?family=helvetica&weight=200Thin&theme=default);
+
+html body {
+    background-color: #181818;
+}
+
+.sendmail .form-control {
+  background-color: #414141;
+  color: white;
+  border-color: #777;
+}
+
+.sendmail .well .h5 {
+  color: orange;
+}
+
+.well {
+  background: #222;
+}
+
+h1.sendme {
+  color: white;
+}
+
+.navbar-default {
+  background-color: transparent;
+}
+
+.menu-de-navigation a {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 200;
+  font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif;
+}
+
+
+#sidebar .logo-sidebar .st1 {
+  fill: @brand-primary;
+}
+
+#sidebar .logo-sidebar .st2 {
+  fill: #555;
+}
+
+#sidebar .logo-sidebar {
+  padding: 115px 10px 0 0;
+}
+
+.fr-view blockquote {
+  border-left: 5px solid lighten(@brand-primary, 20%)!important;
+  color: @brand-primary!important;
+}
+
+ .navbar-left.menus li a.menu:hover {
+  color: @brand-primary;
+  background-color: #0F0F0F;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: @brand-primary;
+}
+
+.home header .navbar-right.access, .home header .navbar-right .navbar-nav, body.backend #sidebar {
+  background-color: #222;
+}
+
+.home header .navbar-right.access {
+  opacity: 1.0!important;
+}
+
+.navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+  font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif;
+  color: #a1a1a1;
+
+}
+
+body {
+	// color: #31354B;
+  color:#BBBBBB;
+	font-family: 'Open Sans Light', Helvetica, Helvetica Neue, Arial, sans-serif;
+  background: #2a2a2a url(/assets/img/bg2.png) repeat fixed;
+}
+/*
+.menu-de-navigation.vertical {
+	margin-top: 110px!important;
+}
+*/
+
+.fr-view {
+  color: inherit;
+  /*
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  */
+}
+
+#sidebar, .navbar-default .navbar-brand {
+  background-color: #1E1E1E;
+}
+
+/*
+#sidebar {
+  background: #1E1E1E url(/themes/efxdesign/img/whirl.min.svg) no-repeat fixed;
+  background-position-y: 145px;
+  background-position-x: 50px;
+  background-size: 350px;
+} */
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: white;
+}
+
+@media only screen and (max-width : 768px) {
+	#sidebar {
+		background-color: transparent;
+	}
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  background-color: transparent;
+}
+
+// "Open Sans Light"
+// "Open Sans Light Italic"
+// "helvetica 35 Condensed Thin"
+h1, h2, .h1, .h2, h3, .h3 {
+  font-family: 'helvetica 35 Condensed Thin', Helvetica, Helvetica Neue, Arial, sans-serif;
+  /* word-spacing: 0; */
+}
+ #articles .article .thumb .title-hover {
+   font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif;;
+ } 
+
+h4, h5, h6,.h3, .h4, .h5, .h6 {
+	font-family: 'helvetica 35 Condensed Bold', Helvetica, Helvetica Neue, Arial, sans-serif;
+	text-align: left;
+	color: @brand-primary;
+}
+
+.backend .h3.grey, h3.grey {
+  color: @brand-primary;
+}
+
+h4, .h4 {
+	color: lighten(@brand-primary, 20%);
+}
+/*	font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif; */
+
+.mentions, .custom-mentions {
+  font-family: 'helvetica 35 Condensed', Helvetica, Arial, sans-serif;
+}
+
+.nav > li > a {
+  color: #C1C1C1;
+}
+
+.title-article-expose {
+  color: white;
+}
+
+/* display fullscreen */
+
+
+
+.navbar-header {
+     float: none;
+ }
+ .navbar-toggle {
+     display: block;
+ }
+// collapsed
+// .navbar-collapse.collapse {
+//     display: none!important;
+// }
+
+// .navbar-collapse.collapse.in{
+//     display: block!important;
+// }
+

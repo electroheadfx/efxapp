@@ -1,0 +1,103 @@
+{
+	"path_compilation": "public/themes/",
+	"path_dev": "public/dev-themes/",
+
+	"path_source": "themes/",
+	
+	"less_packages":[
+		"bootstrap",
+		"plyr",
+		"bootstrap-chosen"
+	],
+	
+	"css_to_minify":[
+		"app",
+		"slim",
+		"backend",
+		"slider",
+		"shortnav",
+		"font-awesome",
+		"codemirror",
+		"froala_editor/froala_editor-pkgd",
+		"custom/froala_style",
+		"custom/flickity",
+		"jquery/chosen",
+		"flickity",
+		"fullscreen",
+		"bootstrap-toggle",
+		"ImageSelect",
+		"animate"
+	],
+	
+	"jsfiles_to_minify":[
+		"jquery",
+		"slim-jquery",
+		"codemirror",
+		"xml",
+		"sortable",
+		"bootstrap",
+		"backend/admin_grid",
+		"backend/admin_list",
+		"backend/admin_preview",
+		"backend/app",
+		"backend/post",
+		"backend/cv-post",
+		"backend/menu-post",
+		"backend/category-post",
+		"backend/sort_category",
+		"backend/sort_post",
+		"backend/sort_cv",
+		"backend/sort_menu",
+		"backend/ajaxlist",
+		"backend/bootstrap-select",
+		"frontend/app",
+		"frontend/sendmail",
+		"frontend/scroller",
+		"frontend/isotope-media",
+		"frontend/isotope-cv",
+		"gsap/TweenLite",
+		"gsap/TimelineLite",
+		"gsap/TweenMax",
+		"gsap/CSSPlugin",
+		"gsap/ScrollToPlugin",
+		"janpaepke/ScrollMagic",
+		"janpaepke/plugins/animation-gsap",
+		"libs/imagesloaded-pkgd",
+		"libs/plyr/2.0/plyr",
+		"libs/bootstrap/validator",
+		"libs/isotope/isotope-pkgd",
+		"libs/isotope/masonry-horizontal",
+		"libs/isotope/fit-columns",
+		"libs/isotope/packery-mode-pkgd",
+		"libs/isotope/infinite-scroll-pkgd",
+		"libs/isotope/flickity-pkgd",
+		"libs/isotope/hash",
+		"libs/isotope/fullscreen",
+		"libs/lazysizes/lazysizes",
+		"libs/jquery/expander-jquery",
+		"libs/bootstrap-toggle",
+		"libs/lazysizes/plugins/ls-aspectratio",
+		"libs/spin/spin",
+		"libs/spin/jquery-spin",
+		"libs/yamjs/js-yaml",
+		"libs/jquery/chosen-jquery",
+		"libs/jquery/jquery-cookie",
+		"libs/jquery/js-cookie",
+		"libs/jquery/ImageSelect-jquery",
+		"libs/sketchfab/sketchfab-viewer",
+		"libs/jscolor",
+		"libs/clipboard",
+		"froala_editor/froala_editor-pkgd",
+		"froala_editor/languages/fr"
+	],
+	
+
+	"js_to_concat":{
+
+	},
+
+	"css_to_concat":{
+
+	}
+
+}

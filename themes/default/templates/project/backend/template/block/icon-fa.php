@@ -1,0 +1,1 @@
+<i class="fa fa-<?= $fa ?> fa-5 tooltip-post" data-toggle="tooltip" data-placement="top" title="<?= $title ?> : <?= $value ?>" data-original-title="<?= $title ?> : <?= $value ?>" ></i>

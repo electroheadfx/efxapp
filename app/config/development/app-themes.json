@@ -1,0 +1,45 @@
+{	
+	"default":{
+		"name"		: "default",
+		"access"	: ["backend","frontend"],
+		"version"	: "3.2",
+		"author"	: "Bootstrap Twitter",
+		"mode"		: "theme"
+	},
+	"nogueras":{
+		"name"		: "nogueras",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.2",
+		"author"	: "efx",
+		"mode"		: "asset"
+	},
+	"voguart":{
+		"name"		: "voguart",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.3",
+		"author"	: "efx",
+		"mode"		: "asset"
+	},
+	"josselin":{
+		"name"		: "josselin",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.3",
+		"author"	: "efx",
+		"mode"		: "asset"
+	},
+	"efxdesign":{
+		"name"		: "efxdesign",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.4",
+		"author"	: "efx",
+		"mode"		: "asset"
+	},
+	"varela":{
+		"name"		: "varela",
+		"access"	: ["backend","frontend"],
+		"version"	: "0.5",
+		"author"	: "efx",
+		"mode"		: "asset"
+	}
+
+}

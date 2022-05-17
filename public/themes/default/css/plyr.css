@@ -1,0 +1,783 @@
+@keyframes plyr-progress {
+  /* line 12, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  to {
+    background-position: 25px 0;
+  }
+}
+/* line 20, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr {
+  position: relative;
+  max-width: 100%;
+  min-width: 200px;
+  font-family: Avenir, 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  direction: ltr;
+}
+/* line 30, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr,
+.plyr *,
+.plyr *::after,
+.plyr *::before {
+  box-sizing: border-box;
+}
+/* line 40, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr a,
+.plyr button,
+.plyr input,
+.plyr label {
+  touch-action: manipulation;
+}
+/* line 49, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr:focus {
+  outline: 0;
+}
+/* line 54, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr video,
+.plyr audio {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: inherit;
+}
+/* line 64, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range'] {
+  display: block;
+  height: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+/* line 78, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-webkit-slider-runnable-track {
+  height: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  user-select: none;
+}
+/* line 81, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -4px;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  transition: background .2s ease, border .2s ease, transform .2s ease;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+/* line 88, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-moz-range-track {
+  height: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  user-select: none;
+}
+/* line 91, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-moz-range-thumb {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  transition: background .2s ease, border .2s ease, transform .2s ease;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+/* line 96, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-ms-track {
+  height: 8px;
+  background: transparent;
+  border: 0;
+  color: transparent;
+}
+/* line 102, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-ms-fill-upper {
+  height: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  user-select: none;
+}
+/* line 105, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-ms-fill-lower {
+  height: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  user-select: none;
+  background: #b1243c;
+}
+/* line 109, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-ms-thumb {
+  position: relative;
+  height: 16px;
+  width: 16px;
+  background: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  transition: background .2s ease, border .2s ease, transform .2s ease;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  margin-top: 0;
+}
+/* line 114, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-ms-tooltip {
+  display: none;
+}
+/* line 119, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']:focus {
+  outline: 0;
+}
+/* line 122, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']::-moz-focus-outer {
+  border: 0;
+}
+/* line 125, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range'].tab-focus:focus {
+  outline-offset: 3px;
+}
+/* line 131, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']:active::-webkit-slider-thumb {
+  background: #b1243c;
+  border-color: #ffffff;
+  transform: scale(1.25);
+}
+/* line 134, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']:active::-moz-range-thumb {
+  background: #b1243c;
+  border-color: #ffffff;
+  transform: scale(1.25);
+}
+/* line 137, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr input[type='range']:active::-ms-thumb {
+  background: #b1243c;
+  border-color: #ffffff;
+  transform: scale(1.25);
+}
+/* line 145, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video input[type='range'].tab-focus:focus {
+  outline: 1px dotted rgba(255, 255, 255, 0.5);
+}
+/* line 150, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio input[type='range'].tab-focus:focus {
+  outline: 1px dotted rgba(86, 93, 100, 0.5);
+}
+/* line 155, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute !important;
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+}
+/* line 177, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__video-wrapper {
+  position: relative;
+  background: #000;
+  border-radius: inherit;
+}
+/* line 184, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__video-embed {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 0;
+}
+/* line 193, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  user-select: none;
+}
+/* line 204, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__video-embed > div {
+  position: relative;
+  padding-bottom: 200%;
+  transform: translateY(-35.95%);
+}
+/* line 211, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr .plyr__video-embed iframe {
+  pointer-events: none;
+}
+/* line 218, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr video::-webkit-media-text-track-container {
+  display: none;
+}
+/* line 221, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__captions {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  transform: translateY(-40px);
+  transition: transform 0.3s ease;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+}
+/* line 235, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__captions span {
+  border-radius: 2px;
+  padding: 3px 10px;
+  background: rgba(0, 0, 0, 0.7);
+  box-decoration-break: clone;
+  line-height: 150%;
+}
+/* line 242, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__captions span:empty {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 246, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr__captions {
+    font-size: 24px;
+  }
+}
+/* line 250, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--captions-active .plyr__captions {
+  display: block;
+}
+/* line 253, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--hide-controls .plyr__captions {
+  transform: translateY(-15px);
+}
+@media (min-width: 1024px) {
+  /* line 258, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr--fullscreen-active .plyr__captions {
+    font-size: 32px;
+  }
+}
+/* line 266, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr ::-webkit-media-controls {
+  display: none;
+}
+/* line 271, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  text-align: center;
+  pointer-events: none;
+}
+/* line 278, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls > * {
+  pointer-events: all;
+}
+/* line 283, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls > button,
+.plyr__controls .plyr__progress,
+.plyr__controls .plyr__time {
+  margin-left: 5px;
+}
+/* line 288, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls > button:first-child,
+.plyr__controls .plyr__progress:first-child,
+.plyr__controls .plyr__time:first-child {
+  margin-left: 0;
+}
+/* line 292, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls .plyr__volume {
+  margin-left: 5px;
+}
+/* line 295, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls [data-plyr='pause'] {
+  margin-left: 0;
+}
+/* line 300, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  overflow: visible;
+  vertical-align: middle;
+  padding: 7px;
+  border: 0;
+  background: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  color: inherit;
+}
+/* line 314, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}
+/* line 322, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:focus {
+  outline: 0;
+}
+/* line 328, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls .icon--exit-fullscreen,
+.plyr__controls .icon--muted,
+.plyr__controls .icon--captions-on {
+  display: none;
+}
+@media (min-width: 480px) {
+  /* line 335, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr__controls > button,
+  .plyr__controls .plyr__progress,
+  .plyr__controls .plyr__time {
+    margin-left: 10px;
+  }
+}
+/* line 343, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--hide-controls .plyr__controls {
+  opacity: 0;
+  pointer-events: none;
+}
+/* line 349, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video .plyr__controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 50px 10px 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+/* line 364, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video .plyr__controls button.tab-focus:focus,
+.plyr--video .plyr__controls button:hover {
+  background: #b1243c;
+  color: #ffffff;
+}
+/* line 373, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio .plyr__controls {
+  padding: 10px;
+  border-radius: inherit;
+  background: #ffffff;
+  border: 1px solid #dbe3e8;
+  color: #565d64;
+}
+/* line 382, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr--audio .plyr__controls button:hover {
+  background: #b1243c;
+  color: #ffffff;
+}
+/* line 391, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__play-large {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background: #b1243c;
+  border: 4px solid currentColor;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+/* line 406, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__play-large svg {
+  position: relative;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: currentColor;
+}
+/* line 415, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__play-large:focus {
+  outline: 1px dotted rgba(255, 255, 255, 0.5);
+}
+/* line 419, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr .plyr__play-large {
+  display: inline-block;
+}
+/* line 422, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio .plyr__play-large {
+  display: none;
+}
+/* line 425, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--playing .plyr__play-large {
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 431, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls [data-plyr='pause'],
+.plyr--playing .plyr__controls [data-plyr='play'] {
+  display: none;
+}
+/* line 435, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--playing .plyr__controls [data-plyr='pause'] {
+  display: inline-block;
+}
+/* line 440, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active .icon--exit-fullscreen,
+.plyr--muted .plyr__controls .icon--muted,
+.plyr--captions-active .plyr__controls .icon--captions-on {
+  display: block;
+}
+/* line 445, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active .icon--exit-fullscreen + svg,
+.plyr--muted .plyr__controls .icon--muted + svg,
+.plyr--captions-active .plyr__controls .icon--captions-on + svg {
+  display: none;
+}
+/* line 451, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr [data-plyr='captions'],
+.plyr [data-plyr='fullscreen'] {
+  display: none;
+}
+/* line 455, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--captions-enabled [data-plyr='captions'],
+.plyr--fullscreen-enabled [data-plyr='fullscreen'] {
+  display: inline-block;
+}
+/* line 462, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__tooltip {
+  position: absolute;
+  z-index: 2;
+  bottom: 100%;
+  margin-bottom: 10px;
+  padding: 5px 7.5px;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.3;
+  transform: translate(-50%, 10px) scale(0.8);
+  transform-origin: 50% 100%;
+  transition: transform 0.2s 0.1s ease, opacity 0.2s 0.1s ease;
+}
+/* line 482, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__tooltip::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(0, 0, 0, 0.7);
+  border-left: 4px solid transparent;
+  z-index: 2;
+}
+/* line 499, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr button:hover .plyr__tooltip,
+.plyr button.tab-focus:focus .plyr__tooltip,
+.plyr__tooltip--visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+/* line 505, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr button:hover .plyr__tooltip {
+  z-index: 3;
+}
+/* line 510, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:first-child .plyr__tooltip {
+  left: 0;
+  transform: translate(0, 10px) scale(0.8);
+  transform-origin: 0 100%;
+}
+/* line 515, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:first-child .plyr__tooltip::before {
+  left: 16px;
+}
+/* line 521, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:last-child .plyr__tooltip {
+  right: 0;
+  transform: translate(0, 10px) scale(0.8);
+  transform-origin: 100% 100%;
+}
+/* line 526, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:last-child .plyr__tooltip::before {
+  left: auto;
+  right: 16px;
+  transform: translateX(50%);
+}
+/* line 535, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__controls button:first-child:hover .plyr__tooltip,
+.plyr__controls button:last-child:hover .plyr__tooltip,
+.plyr__controls button:first-child.tab-focus:focus .plyr__tooltip,
+.plyr__controls button:last-child.tab-focus:focus .plyr__tooltip,
+.plyr__controls button:first-child .plyr__tooltip--visible,
+.plyr__controls button:last-child .plyr__tooltip--visible {
+  transform: translate(0, 0) scale(1);
+}
+/* line 545, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress {
+  position: relative;
+  display: none;
+  flex: 1;
+}
+/* line 550, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress input[type='range'] {
+  position: relative;
+  z-index: 2;
+}
+/* line 554, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress input[type='range']::-webkit-slider-runnable-track {
+  background: transparent;
+}
+/* line 557, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress input[type='range']::-moz-range-track {
+  background: transparent;
+}
+/* line 560, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress input[type='range']::-ms-fill-upper {
+  background: transparent;
+}
+/* line 566, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress .plyr__tooltip {
+  left: 0;
+}
+/* line 570, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr .plyr__progress {
+  display: inline-block;
+}
+/* line 574, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer,
+.plyr__progress--played,
+.plyr__volume--display {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 8px;
+  margin: -4px 0 0;
+  padding: 0;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 100px;
+}
+/* line 590, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-webkit-progress-bar,
+.plyr__progress--played::-webkit-progress-bar,
+.plyr__volume--display::-webkit-progress-bar {
+  background: transparent;
+}
+/* line 593, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-webkit-progress-value,
+.plyr__progress--played::-webkit-progress-value,
+.plyr__volume--display::-webkit-progress-value {
+  background: currentColor;
+  border-radius: 100px;
+  min-width: 8px;
+}
+/* line 598, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-moz-progress-bar,
+.plyr__progress--played::-moz-progress-bar,
+.plyr__volume--display::-moz-progress-bar {
+  background: currentColor;
+  border-radius: 100px;
+  min-width: 8px;
+}
+/* line 603, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-ms-fill,
+.plyr__progress--played::-ms-fill,
+.plyr__volume--display::-ms-fill {
+  border-radius: 100px;
+}
+/* line 607, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--played,
+.plyr__volume--display {
+  z-index: 1;
+  color: #b1243c;
+  background: transparent;
+  transition: none;
+}
+/* line 614, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--played::-webkit-progress-value,
+.plyr__volume--display::-webkit-progress-value {
+  min-width: 8px;
+  max-width: 99%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: none;
+}
+/* line 621, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--played::-moz-progress-bar,
+.plyr__volume--display::-moz-progress-bar {
+  min-width: 8px;
+  max-width: 99%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: none;
+}
+/* line 628, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--played::-ms-fill,
+.plyr__volume--display::-ms-fill {
+  display: none;
+}
+/* line 633, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-webkit-progress-value {
+  transition: width 0.2s ease;
+}
+/* line 636, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-moz-progress-bar {
+  transition: width 0.2s ease;
+}
+/* line 639, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__progress--buffer::-ms-fill {
+  transition: width 0.2s ease;
+}
+/* line 643, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video .plyr__progress--buffer,
+.plyr--video .plyr__volume--display {
+  background: rgba(255, 255, 255, 0.25);
+}
+/* line 647, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video .plyr__progress--buffer {
+  color: rgba(255, 255, 255, 0.25);
+}
+/* line 650, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+  background: rgba(198, 214, 219, 0.66);
+}
+/* line 654, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio .plyr__progress--buffer {
+  color: rgba(198, 214, 219, 0.66);
+}
+/* line 659, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--loading .plyr__progress--buffer {
+  animation: plyr-progress 1s linear infinite;
+  background-size: 25px 25px;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.15) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 75%, transparent);
+  color: transparent;
+}
+/* line 675, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--video.plyr--loading .plyr__progress--buffer {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+/* line 678, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--audio.plyr--loading .plyr__progress--buffer {
+  background-color: rgba(198, 214, 219, 0.66);
+}
+/* line 684, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__time {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+/* line 690, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__time + .plyr__time {
+  display: none;
+}
+@media (min-width: 768px) {
+  /* line 693, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr__time + .plyr__time {
+    display: inline-block;
+  }
+}
+/* line 698, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__time + .plyr__time::before {
+  content: '\2044';
+  margin-right: 10px;
+}
+/* line 706, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr__volume {
+  display: none;
+}
+/* line 709, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr .plyr__volume {
+  flex: 1;
+  position: relative;
+}
+/* line 713, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr .plyr__volume input[type='range'] {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 480px) {
+  /* line 717, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr .plyr__volume {
+    display: block;
+    max-width: 60px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 721, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+  .plyr .plyr__volume {
+    max-width: 100px;
+  }
+}
+/* line 729, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--is-ios .plyr__volume,
+.plyr--is-ios [data-plyr='mute'] {
+  display: none !important;
+}
+/* line 736, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  border-radius: 0 !important;
+}
+/* line 742, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active video {
+  height: 100%;
+}
+/* line 745, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active .plyr__video-wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* line 749, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active .plyr__video-embed {
+  overflow: visible;
+}
+/* line 755, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-active.plyr--vimeo .plyr__video-wrapper {
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 763, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/plyr/plyr.less */
+.plyr--fullscreen-fallback.plyr--fullscreen-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000000;
+}
+/*#3498db;*/
+/* line 8, /Users/efxair/sites/efxdesign/site/themes/default/assets/less/custom/plyr.less */
+.plyr input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: 0 0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRoZW1lcy9kZWZhdWx0L2Fzc2V0cy9sZXNzL3BseXIvcGx5ci5sZXNzIiwidGhlbWVzL2RlZmF1bHQvYXNzZXRzL2xlc3MvcGx5ci92YXJpYWJsZXMubGVzcyIsInRoZW1lcy9kZWZhdWx0L2Fzc2V0cy9sZXNzL3BseXIvbWl4aW5zLmxlc3MiLCJ0aGVtZXMvZGVmYXVsdC9hc3NldHMvbGVzcy9jdXN0b20vcGx5ci5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVVBOztFQUNJO0lBQ0ksMkJBQUE7Ozs7QUFPUjtFQUNJLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0VBQ0EscUJDVDRDLGVBQWUsa0JBQWtCLHdDRFM3RTtFQUNBLGNBQUE7OztBQUtJO0FBVlIsS0FXUTtBQVhSLEtBWVEsRUFBQztBQVpULEtBYVEsRUFBQztFQUNHLHNCQUFBOzs7QUFkWixLQW9CUTtBQXBCUixLQXFCUTtBQXJCUixLQXNCUTtBQXRCUixLQXVCUTtFQUNJLDBCQUFBOzs7QUFLUixLQUFDO0VBQ0csVUFBQTs7O0FBOUJSLEtBa0NJO0FBbENKLEtBbUNJO0VBQ0ksV0FBQTtFQUNBLFlBQUE7RUFDQSxzQkFBQTtFQUNBLHNCQUFBOzs7QUF2Q1IsS0E0Q0ksTUFBSztFQUNELGNBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBRUEsd0JBQUE7RUFDQSxxQkFBQTtFQUNBLGVBQUE7RUFDQSxZQUFBO0VBQ0EsdUJBQUE7OztBQUdBLEtBZEosTUFBSyxjQWNBO0VFdEVMLFdBQUE7RUFDQSx1QkFBQTtFQUNBLFNBQUE7RUFDQSxrQkFBQTtFQUNBLGlCQUFBOzs7QUZxRUksS0FqQkosTUFBSyxjQWlCQTtFQUNHLHdCQUFBO0VBQ0EsZ0JBQUE7RUVwRVIsa0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLG1CQUFBO0VBQ0EsNkJBQUE7RUFDQSxtQkFBQTtFQUNBLG9FQUFBO0VBQ0Esd0VBQUE7RUFDQSxzQkFBQTs7O0FGaUVJLEtBeEJK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 */

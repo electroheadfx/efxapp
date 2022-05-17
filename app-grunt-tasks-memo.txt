@@ -1,0 +1,196 @@
+Grunt Memo Tasks
+
+
+Global Tasks
+	• grunt all 		: Does all tasks
+	• grunt min_less 	: Compile all less data
+	• grunt min_assets 	: Minify all Assets data
+	• grunt min_js 		: Minify all JS data
+	• grunt min_css 	: Minify all CSS data
+	• grunt conc_js 	: Concate all JS data
+	• grunt conc_css 	: Concate all CSS data
+Copy assets Tasks
+
+
+	Copy Task on Theme varela
+		copy css to dev :	grunt copy:css_dev_varela
+		copy js to dev  :	grunt copy:js_dev_varela
+		copy FONT dev to prod  :	grunt copy:fonts_varela
+		copy IMG dev to prod  :	grunt copy:img_varela
+
+	Copy Task on Theme efxdesign
+		copy css to dev :	grunt copy:css_dev_efxdesign
+		copy js to dev  :	grunt copy:js_dev_efxdesign
+		copy FONT dev to prod  :	grunt copy:fonts_efxdesign
+		copy IMG dev to prod  :	grunt copy:img_efxdesign
+
+	Copy Task on Theme josselin
+		copy css to dev :	grunt copy:css_dev_josselin
+		copy js to dev  :	grunt copy:js_dev_josselin
+		copy FONT dev to prod  :	grunt copy:fonts_josselin
+		copy IMG dev to prod  :	grunt copy:img_josselin
+
+	Copy Task on Theme voguart
+		copy css to dev :	grunt copy:css_dev_voguart
+		copy js to dev  :	grunt copy:js_dev_voguart
+		copy FONT dev to prod  :	grunt copy:fonts_voguart
+		copy IMG dev to prod  :	grunt copy:img_voguart
+
+	Copy Task on Theme nogueras
+		copy css to dev :	grunt copy:css_dev_nogueras
+		copy js to dev  :	grunt copy:js_dev_nogueras
+		copy FONT dev to prod  :	grunt copy:fonts_nogueras
+		copy IMG dev to prod  :	grunt copy:img_nogueras
+
+	Copy Task on Theme default
+		copy css to dev :	grunt copy:css_dev_default
+		copy js to dev  :	grunt copy:js_dev_default
+		copy FONT dev to prod  :	grunt copy:fonts_default
+		copy IMG dev to prod  :	grunt copy:img_default
+
+Less Tasks
+
+
+	Less Task on Theme varela
+
+		Package plyr : 
+			grunt less:dist_varela_plyr
+			grunt less:dev_varela_plyr
+
+		Package bootstrap : 
+			grunt less:dist_varela_bootstrap
+			grunt less:dev_varela_bootstrap
+
+
+	Less Task on Theme efxdesign
+
+		Package plyr : 
+			grunt less:dist_efxdesign_plyr
+			grunt less:dev_efxdesign_plyr
+
+		Package bootstrap : 
+			grunt less:dist_efxdesign_bootstrap
+			grunt less:dev_efxdesign_bootstrap
+
+
+	Less Task on Theme josselin
+
+		Package bootstrap : 
+			grunt less:dist_josselin_bootstrap
+			grunt less:dev_josselin_bootstrap
+
+
+	Less Task on Theme voguart
+
+		Package bootstrap : 
+			grunt less:dist_voguart_bootstrap
+			grunt less:dev_voguart_bootstrap
+
+
+	Less Task on Theme nogueras
+
+		Package bootstrap : 
+			grunt less:dist_nogueras_bootstrap
+			grunt less:dev_nogueras_bootstrap
+
+
+	Less Task on Theme default
+
+		Package bootstrap-chosen : 
+			grunt less:dist_default_bootstrap-chosen
+			grunt less:dev_default_bootstrap-chosen
+
+		Package plyr : 
+			grunt less:dist_default_plyr
+			grunt less:dev_default_plyr
+
+		Package bootstrap : 
+			grunt less:dist_default_bootstrap
+			grunt less:dev_default_bootstrap
+
+
+
+CSS minify Tasks
+		grunt cssmin:cssmin_default_animate
+		grunt cssmin:cssmin_default_ImageSelect
+		grunt cssmin:cssmin_default_bootstrap-toggle
+		grunt cssmin:cssmin_default_fullscreen
+		grunt cssmin:cssmin_default_flickity
+		grunt cssmin:cssmin_default_jquery/chosen
+		grunt cssmin:cssmin_default_custom/flickity
+		grunt cssmin:cssmin_default_custom/froala_style
+		grunt cssmin:cssmin_default_froala_editor/froala_editor-pkgd
+		grunt cssmin:cssmin_default_codemirror
+		grunt cssmin:cssmin_default_font-awesome
+		grunt cssmin:cssmin_default_shortnav
+		grunt cssmin:cssmin_default_slider
+		grunt cssmin:cssmin_default_backend
+		grunt cssmin:cssmin_default_slim
+		grunt cssmin:cssmin_default_app
+
+
+JS Uglify Tasks
+		grunt uglify:uglify_default_froala_editor/languages/fr
+		grunt uglify:uglify_default_froala_editor/froala_editor-pkgd
+		grunt uglify:uglify_default_libs/clipboard
+		grunt uglify:uglify_default_libs/jscolor
+		grunt uglify:uglify_default_libs/sketchfab/sketchfab-viewer
+		grunt uglify:uglify_default_libs/jquery/ImageSelect-jquery
+		grunt uglify:uglify_default_libs/jquery/js-cookie
+		grunt uglify:uglify_default_libs/jquery/jquery-cookie
+		grunt uglify:uglify_default_libs/jquery/chosen-jquery
+		grunt uglify:uglify_default_libs/yamjs/js-yaml
+		grunt uglify:uglify_default_libs/spin/jquery-spin
+		grunt uglify:uglify_default_libs/spin/spin
+		grunt uglify:uglify_default_libs/lazysizes/plugins/ls-aspectratio
+		grunt uglify:uglify_default_libs/bootstrap-toggle
+		grunt uglify:uglify_default_libs/jquery/expander-jquery
+		grunt uglify:uglify_default_libs/lazysizes/lazysizes
+		grunt uglify:uglify_default_libs/isotope/fullscreen
+		grunt uglify:uglify_default_libs/isotope/hash
+		grunt uglify:uglify_default_libs/isotope/flickity-pkgd
+		grunt uglify:uglify_default_libs/isotope/infinite-scroll-pkgd
+		grunt uglify:uglify_default_libs/isotope/packery-mode-pkgd
+		grunt uglify:uglify_default_libs/isotope/fit-columns
+		grunt uglify:uglify_default_libs/isotope/masonry-horizontal
+		grunt uglify:uglify_default_libs/isotope/isotope-pkgd
+		grunt uglify:uglify_default_libs/bootstrap/validator
+		grunt uglify:uglify_default_libs/plyr/3.0/plyr
+		grunt uglify:uglify_default_libs/imagesloaded-pkgd
+		grunt uglify:uglify_default_janpaepke/plugins/animation-gsap
+		grunt uglify:uglify_default_janpaepke/ScrollMagic
+		grunt uglify:uglify_default_gsap/ScrollToPlugin
+		grunt uglify:uglify_default_gsap/CSSPlugin
+		grunt uglify:uglify_default_gsap/TweenMax
+		grunt uglify:uglify_default_gsap/TimelineLite
+		grunt uglify:uglify_default_gsap/TweenLite
+		grunt uglify:uglify_default_frontend/isotope-cv
+		grunt uglify:uglify_default_frontend/isotope-media
+		grunt uglify:uglify_default_frontend/scroller
+		grunt uglify:uglify_default_frontend/sendmail
+		grunt uglify:uglify_default_frontend/app
+		grunt uglify:uglify_default_backend/bootstrap-select
+		grunt uglify:uglify_default_backend/sort_menu
+		grunt uglify:uglify_default_backend/sort_cv
+		grunt uglify:uglify_default_backend/sort_post
+		grunt uglify:uglify_default_backend/sort_category
+		grunt uglify:uglify_default_backend/category-post
+		grunt uglify:uglify_default_backend/menu-post
+		grunt uglify:uglify_default_backend/cv-post
+		grunt uglify:uglify_default_backend/post
+		grunt uglify:uglify_default_backend/app
+		grunt uglify:uglify_default_backend/admin_preview
+		grunt uglify:uglify_default_backend/admin_list
+		grunt uglify:uglify_default_backend/admin_grid
+		grunt uglify:uglify_default_bootstrap
+		grunt uglify:uglify_default_sortable
+		grunt uglify:uglify_default_xml
+		grunt uglify:uglify_default_codemirror
+		grunt uglify:uglify_default_slim-jquery
+		grunt uglify:uglify_default_jquery
+
+
+Concat JS Tasks
+
+
+Concat CSS Tasks

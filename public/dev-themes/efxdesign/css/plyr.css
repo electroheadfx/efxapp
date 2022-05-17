@@ -1,0 +1,12 @@
+@import "../../../../default/assets/css/plyr3.css";
+/*#B1243C #3498db;*/
+/* line 9, /Users/efxair/sites/clients/varela/fuelphp/themes/default/assets/less/custom/plyr.less */
+.plyr input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: 0 0;
+}
+/*#B1243C #3498db;*/
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRoZW1lcy9kZWZhdWx0L2Fzc2V0cy9sZXNzL2N1c3RvbS9wbHlyLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IlFBRVE7OztBQU1SLEtBQU0sTUFBSztFQUNQLHdCQUFBO0VBQ0EscUJBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBIn0= */

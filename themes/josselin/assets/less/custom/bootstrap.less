@@ -1,0 +1,139 @@
+// bootstrap 3.2.6
+
+// setup bootstrap fallback
+@base-url: "../../../../default/assets/less/bootstrap-3.3.7";
+@custom-url: "../../../../default/assets/less/custom";
+
+// Import bootstrap core
+@import "../bootstrap/bootstrap.less";
+@import "../../../../default/assets/less/custom/bootstrap_default.less";
+// Import bootstrap-select
+@import "../bootstrap/bootstrap-select.less";
+
+// Theme
+// -----------------------------------------------------
+
+// "futuracl Condensed Light"
+@import url(/efx/font/index.css?family=futuracl&weight=200Condensed+Light&theme=josselin);
+// "helvetica 35 Condensed Thin"
+@import url(/efx/font/index.css?family=helvetica+35&weight=200Condensed+Thin&theme=josselin);
+
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Condensed+Light,200Condensed+Light+Italic&theme=default);
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Light,200Light+Italic&theme=default);
+@import url(/efx/font/index.css?family=Helvetica&weight=200Thin&theme=default);
+
+html body {
+    background-color: rgba(0,0,0,1.00);
+
+}
+
+.navbar-default {
+  background-color: transparent;
+}
+
+.menu-de-navigation a {
+  font-size: 32px;
+  line-height: 24px;
+  font-weight: 200;
+}
+
+.fr-view blockquote {
+  border-left: 5px solid lighten(@brand-primary, 20%)!important;
+  color: @brand-primary!important;
+}
+
+ .navbar-left.menus li a.menu:hover {
+  color: @brand-primary;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: @brand-primary;
+}
+
+body {
+	// color: #31354B;
+  color:#BBBBBB;
+	font-family: 'helvetica 35 Condensed Thin', Helvetica, Helvetica Neue, Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+/*
+.menu-de-navigation.vertical {
+	margin-top: 110px!important;
+}
+*/
+
+.fr-view {
+  color: inherit;
+  /*
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  */
+}
+
+#sidebar {
+  background-color: transparent;
+}
+
+@media only screen and (max-width : 768px) {
+	#sidebar {
+		background-color: transparent;
+	}
+}
+
+header .logo-navbar {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  background-color: transparent;
+}
+
+/* sort frontend buttons	*/
+#frontend-control .btn {
+  color: #A7ABB1;
+  border-color: #c5cdd8;
+}
+
+#frontend-control .btn:hover {
+  background-color: #D5D8E7;
+  color: #060A19;
+}
+
+#frontend-control .btn.active {
+  color: @brand-primary;
+}
+/* */
+
+/* #articles .article .thumb .title-hover */
+h1, h2, .h1, .h2 {
+  font-family: 'helvetica 35 Condensed Thin', Helvetica, Helvetica Neue, Arial, sans-serif;
+  /* word-spacing: 0; */
+}
+
+h3, h4, h5, h6,.h3, .h4, .h5, .h6 {
+	font-family: 'futuracl Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif;
+	text-align: left;
+	color: @brand-primary;
+  word-spacing: -6px;
+}
+
+h4, .h4 {
+	color: lighten(@brand-primary, 20%);
+}
+/*	font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif; */
+
+.nav > li > a {
+  color: #C1C1C1;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #7A84A3;
+  color:white;
+}
+
+#articles .article .summary {
+  font-size: 16px!important;
+}

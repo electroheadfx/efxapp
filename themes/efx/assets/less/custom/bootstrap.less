@@ -1,0 +1,77 @@
+// bootstrap 3.2.6
+
+// setup bootstrap fallback
+@base-url: "../../../../default/assets/less/bootstrap-3.3.7";
+@custom-url: "../../../../default/assets/less/custom";
+
+// Import bootstrap core
+@import "../bootstrap/bootstrap.less";
+@import "../../../../default/assets/less/custom/bootstrap_default.less";
+// Import bootstrap-select
+@import "../bootstrap/bootstrap-select.less";
+
+// Nogueras theme
+// -----------------------------------------------------
+
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Condensed+Light,200Condensed+Light+Italic&theme=default);
+@import url(/efx/font/index.css?family=Open+Sans&weight=200Light,200Light+Italic&theme=default);
+@import url(/efx/font/index.css?family=Helvetica&weight=200Thin&theme=default);
+@import url(/efx/font/index.css?family=Veneer+Clean+Soft&weight=400Bold&theme=voguart);
+
+body {
+	color: #31354B;
+	/* font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif; */
+}
+/*
+.menu-de-navigation.vertical {
+	margin-top: 110px!important;
+}
+*/
+
+@media only screen and (max-width : 768px) {
+	#sidebar {
+		background-color: #060A19;
+	}
+}
+
+header .logo-navbar {
+  background-color: #060A19;
+  /*
+  background: #060A19 url(/assets/img/wheel-looping-voguart.gif) no-repeat fixed;
+  background-position-y: 12px;
+  background-position-x: 385px;
+  background-size: 230px;
+  */
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  background-color: #060A19;
+}
+
+/* sort frontend buttons	*/
+#frontend-control .btn {
+  color: #7d8a9f;
+  border-color: #c5cdd8;
+}
+
+#frontend-control .btn:hover {
+  background-color: #D5D8E7;
+  color: #060A19;
+}
+
+#frontend-control .btn.active {
+  color: @brand-primary;
+}
+/* */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Veneer Clean Soft Bold', Helvetica, Helvetica Neue, Arial, sans-serif;
+	text-align: left;
+	color: #686D85;
+}
+
+h4, .h4 {
+	color: @brand-primary;
+}
+/*	font-family: 'Open Sans Condensed Light', Helvetica, Helvetica Neue, Arial, sans-serif; */
