@@ -1,6 +1,6 @@
 .svn
 .htaccess
-node
+.DS_Store
 app/config/production/db.php
 app/config/production/config.php
 app/config/production/ormauth.php
